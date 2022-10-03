@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_main"
+    android:orientation="vertical"
+    tools:context=".login_activity">
+
+    <ImageView
+        android:id="@+id/create_account_logo"
+        android:layout_width="215dp"
+        android:layout_height="197dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/splash_screen_logo">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/create_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:fontFamily="@font/poppins_light"
+        android:gravity="center"
+        android:text="@string/create_account"
+        android:textColor="#fff"
+        android:textSize="34sp"
+        android:textStyle="bold">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/user_registration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/poppins_light"
+        android:gravity="center"
+        android:text="@string/use_email_for_registration"
+        android:textColor="#fff"
+        android:textSize="16sp">
+
+    </TextView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="30dp"
+        android:elevation="11dp"
+        app:cardCornerRadius="10dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|start"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:fontFamily="@font/poppins_light"
+            android:hint="@string/name"
+            android:inputType="text"
+            android:textColor="#000000"
+            android:textColorHint="@color/black"
+            android:textSize="14sp"
+            android:textStyle="normal" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="30dp"
+        android:elevation="11dp"
+        app:cardCornerRadius="10dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|start"
+            android:layout_marginStart="15dp"
+            android:inputType="text"
+            android:layout_marginEnd="15dp"
+            android:fontFamily="@font/poppins_light"
+            android:hint="@string/email"
+            android:textColorHint="@color/black"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:textStyle="normal" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="30dp"
+        android:elevation="11dp"
+        app:cardCornerRadius="10dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|start"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:inputType="numberPassword"
+            android:fontFamily="@font/poppins_light"
+            android:hint="@string/password"
+            android:textColorHint="@color/black"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:textStyle="normal" />
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/sign_up"
+        android:layout_width="152dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="55dp"
+        android:backgroundTint="#00279B"
+        android:textColor="@color/white"
+        android:background="@drawable/button_shape"
+        android:fontFamily="@font/poppins_light"
+        android:text="@string/sign_up"
+        android:textSize="18sp">
+
+    </Button>
+
+
+</LinearLayout>
