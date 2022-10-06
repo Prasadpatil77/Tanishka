@@ -4,12 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -20,29 +17,19 @@ import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.Task;
 
-public class login_activity extends AppCompatActivity {
+public class signing_activity extends AppCompatActivity {
     GoogleSignInClient mGoogleSignInClient;
     private static int RC_SIGN_IN ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        // white mode
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-        setContentView(R.layout.activity_login);
+
+        setContentView(R.layout.activity_signing);
         getSupportActionBar().hide();
 
-        Button btn = findViewById(R.id.sign_up1);
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(login_activity.this,MainActivity.class);
-                startActivity(i);
-                finish();
-            }
-        });
-        // Configure sign-in to request the user's ID, email address, and basic
-        // profile. ID and basic profile are included in DEFAULT_SIGN_IN.
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
                 .build();
@@ -62,8 +49,10 @@ public class login_activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 signIn();
+                finish();
             }
         });
+
     }
     private void signIn() {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
